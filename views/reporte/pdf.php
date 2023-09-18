@@ -29,6 +29,7 @@
 </style>
 
 <table>
+    
     <thead>
         <tr>
             <th>Fecha</th>

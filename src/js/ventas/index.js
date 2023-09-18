@@ -1,10 +1,8 @@
 
 import { Toast,} from "../funciones";
 
-
 const formulario = document.getElementById('formularioVenta');
 const btnBuscar = document.getElementById('btnBuscar');
-
 
 const buscar = async () => {
     const fechaInicio = document.getElementById('fechaInicio').value;

@@ -1,2 +1,1 @@
-<p>header de PDF</p>
-<?= $saludo ?>
+<p>REPORTE DE VENTAS</p>
