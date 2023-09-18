@@ -19,4 +19,4 @@
     </form>
 </div>
 
-<script src="ruta/a/tu/js/ventas/index.js"></script>
+<script src="build/js/ventas/index.js"></script>

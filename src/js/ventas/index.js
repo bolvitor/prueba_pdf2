@@ -1,9 +1,8 @@
-import { Dropdown } from "bootstrap";
-import Swal from "sweetalert2";
-import { validarFormulario, Toast, confirmacion} from "../funciones";
+
+import { Toast,} from "../funciones";
 
 
-const formulario = document.querySelector('form');
+const formulario = document.getElementById('formularioVenta');
 const btnBuscar = document.getElementById('btnBuscar');
 
 
@@ -22,7 +21,7 @@ const buscar = async () => {
 
     if (fechaInicio > fechaFin) {
         Toast.fire({
-            title: 'La fecha de inicio no puede ser mayor que la fecha de fin.',
+            title: 'La fecha de inicio es mayor a la fecha final',
             icon: 'error'
         });
         return;
