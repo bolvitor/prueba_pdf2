@@ -1,29 +1,50 @@
 <style>
-    h1{
-        color: red
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid #ccc;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #fff;
     }
 </style>
-<h1>HOla mundo desde la vista</h1>
-<p><?= $grado .  " " . $userData?></p>
-<ul>
-    <?php foreach ($data as $d) : ?>
-        <li><?= $d ?></li>
-    <?php endforeach  ?>
-</ul>
-<p style="font-weight: bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident saepe autem dolores. Quos quibusdam itaque eius ipsum ex, necessitatibus odit fugit! Modi blanditiis voluptate minus eligendi cumque, doloremque praesentium molestiae.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Cantidad</th>
+            <th>Producto</th>
+            <th>Cliente</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($ventas as $venta) : ?>
+            <tr>
+                <td><?= $venta->fecha ?></td>
+                <td><?= $venta->cantidad ?></td>
+                <td><?= $venta->producto ?></td>
+                <td><?= $venta->cliente ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
